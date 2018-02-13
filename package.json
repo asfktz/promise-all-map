@@ -1,0 +1,14 @@
+{
+  "name": "map-all",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape ./test.js"
+  },
+  "author": "Asaf Katz",
+  "license": "ISC",
+  "devDependencies": {
+    "tape": "^4.8.0"
+  }
+}
