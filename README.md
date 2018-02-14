@@ -26,7 +26,7 @@ const posts = await all(urls, async (url) => {
 
 
 
-### Simplified implantation
+### Simplified implementation
 ```js
 const identity = (value) => value
 
