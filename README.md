@@ -1,3 +1,8 @@
+### Install
+```
+npm install map-all
+```
+
 ### Exmaple
 ```js
 const urls = [
