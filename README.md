@@ -1,6 +1,6 @@
 ### Install
 ```
-npm install map-all
+npm i map-all
 ```
 
 ### Exmaple
