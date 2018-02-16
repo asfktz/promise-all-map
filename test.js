@@ -22,3 +22,20 @@ test('should behave like Promise.all, without mapper', async (t) => {
   t.deepEqual(results, ['one!', 'two!']);
   t.end();
 });
+
+test('should resolve an object of promises', async (t) => {
+  try {
+    const results = await all({
+      one: Promise.resolve('one!'),
+      two: Promise.resolve('two!'),
+    })
+
+
+    t.deepEqual(results, { one: 'one!', two: 'two!' });
+    t.end();
+
+  } catch (err) {
+    console.log('xx')
+    console.error(err)
+  }
+});
