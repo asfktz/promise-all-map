@@ -30,7 +30,6 @@ test('should resolve an object of promises', async (t) => {
       two: Promise.resolve('two!'),
     })
 
-
     t.deepEqual(results, { one: 'one!', two: 'two!' });
     t.end();
 

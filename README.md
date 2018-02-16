@@ -3,7 +3,9 @@
 npm i map-all
 ```
 
-### Exmaple
+
+
+### Promise.all + all
 ```js
 const urls = [
   'api/posts/1',
@@ -21,6 +23,17 @@ const posts = await all(urls, async (url) => {
   const res = await fetch(url);
   return res.json();
 })
+```
+
+### can also resolve an object of promises
+
+```js
+const results = await all({
+  one: Promise.resolve('one!'),
+  two: Promise.resolve('two!'),
+})
+
+results // { one: 'one!', two: 'two!' }
 ```
 
 
