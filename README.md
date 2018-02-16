@@ -1,6 +1,6 @@
 # promise-all-map
 
-A tiny helper that makes Promise.all a bit more powerful by:
+A tiny helper that makes Promise.all a bit more useful by:
 - Accepting a mapper function as a second argument
 - Resolving object of promises too
 
