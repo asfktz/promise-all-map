@@ -4,7 +4,7 @@
   npm i map-all
 ```
 
-#### It act as an Promise.all + map
+#### It act as Promise.all + map
 
 ```js
 const promises = [
