@@ -7,7 +7,8 @@
     "test": "tape ./test.js"
   },
   "author": "Asaf Katz",
-  "license": "ISC",
+  "repository": "https://github.com/asfktz/promise-all-map",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^4.17.0",
     "tape": "^4.8.0"
