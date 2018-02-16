@@ -1,4 +1,4 @@
-# primise-all-map
+# promise-all-map
 
 A tiny helper that makes Promise.all a bit more powerful by:
 - Accepting a mapper function as a second argument
