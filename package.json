@@ -1,6 +1,6 @@
 {
   "name": "promise-all-map",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Promise.all + map",
   "main": "index.js",
   "scripts": {
