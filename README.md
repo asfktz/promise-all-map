@@ -1,3 +1,5 @@
+# primise-all-map
+
 A tiny helper that makes Promise.all a bit more powerful by:
 - Accepting a mapper function as a second argument
 - Resolving object of promises too
@@ -6,6 +8,10 @@ A tiny helper that makes Promise.all a bit more powerful by:
 
 ```
   npm install promise-all-map
+```
+
+```
+  import all from 'promise-all-map';
 ```
 
 #### It acts as Promise.all + map
