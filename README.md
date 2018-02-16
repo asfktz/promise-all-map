@@ -5,7 +5,7 @@ npm i map-all
 
 
 
-### Promise.all + all
+### Promise.all + map
 ```js
 const urls = [
   'api/posts/1',
