@@ -7,16 +7,15 @@
 #### It act as an Promise.all + map
 
 ```js
-    const promises = [
-      getPostById(1),
-      getPostById(2),
-      getPostById(3),
-    ];
+const promises = [
+  getPostById(1),
+  getPostById(2),
+  getPostById(3),
+];
 
-    const titles = await all(promises, (post) => post.title);
+const titles = await all(promises, (post) => post.title);
 
-    titles // ['post title 1', 'post title 2', 'post title 3']
-})
+titles // ['post title 1', 'post title 2', 'post title 3']
 ```
 
 #### You can pass an async mapper too:
