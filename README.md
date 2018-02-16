@@ -41,11 +41,6 @@ const promises = {
 
 const titles = await all(promises, (post) => post.title);
 
-t.deepEqual(titles, {
-  one: 'post title 1',
-  two: 'post title 2',
-  three: 'post title 3',
-});
-```
+titles // { one: 'post title 1', two: 'post title 2', three: 'post title 3' }
 
 
