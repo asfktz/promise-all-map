@@ -36,14 +36,3 @@ const results = await all({
 results // { one: 'one!', two: 'two!' }
 ```
 
-
-
-
-### Simplified implementation
-```js
-const identity = (value) => value
-
-const all = (iterable = [], mapper = identity) => {
-  return Promise.all(iterable.map(mapper))
-}
-```
