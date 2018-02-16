@@ -22,6 +22,12 @@ const posts = await Promise.all(urls.map(async (url) => {
 
 After
 ```js
+
+const urls = [
+  'api/posts/1',
+  'api/posts/1/comments'
+]
+
 const posts = await all(urls, async (url) => {
   const res = await fetch(url);
   return res.json();
