@@ -1,47 +1,51 @@
 ### Install
+
 ```
-npm i map-all
+  npm i map-all
 ```
 
-
-
-### Promise.all + map
-Before
+#### It act as an Promise.all + map
 
 ```js
-const urls = [
-  'api/posts/1',
-  'api/posts/1/comments'
-]
+    const promises = [
+      getPostById(1),
+      getPostById(2),
+      getPostById(3),
+    ];
 
-const posts = await Promise.all(urls.map(async (url) => {
-  const res = await fetch(url);
-  return res.json();
-}))
-```
+    const titles = await all(promises, (post) => post.title);
 
-After
-```js
-
-const urls = [
-  'api/posts/1',
-  'api/posts/1/comments'
-]
-
-const posts = await all(urls, async (url) => {
-  const res = await fetch(url);
-  return res.json();
+    titles // ['post title 1', 'post title 2', 'post title 3']
 })
 ```
 
-### can also resolve an object of promises
+#### You can pass an async mapper too:
 
 ```js
-const results = await all({
-  one: Promise.resolve('one!'),
-  two: Promise.resolve('two!'),
-})
+const titles = await all([1,2,3], async (id) => {
+  const posts = await getPostById(id)
+  return posts.title;
+});
 
-results // { one: 'one!', two: 'two!' }
+titles // ['post title 1', 'post title 2', 'post title 3']
 ```
+
+#### It can also resolve an object:
+    
+```js
+const promises = {
+  one: getPostById(1),
+  two: getPostById(2),
+  three: getPostById(3),
+};
+
+const titles = await all(promises, (post) => post.title);
+
+t.deepEqual(titles, {
+  one: 'post title 1',
+  two: 'post title 2',
+  three: 'post title 3',
+});
+```
+
 
