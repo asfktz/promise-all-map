@@ -47,12 +47,12 @@ titles // ['post title 1', 'post title 2', 'post title 3']
 `all(object, [mapper])`
 
 ```js
-const titles = await all({
+const posts = await all({
   one: fetchPost(1),
   two: fetchPost(2),
   three: fetchPost(3),
 });
 
-titles // { one: 'post title 1', two: 'post title 2', three: 'post title 3' }
+posts.one // { title: 'post title 1' }
 
 
