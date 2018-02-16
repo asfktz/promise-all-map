@@ -8,9 +8,9 @@
 
 ```js
 const promises = [
-  getPostById(1),
-  getPostById(2),
-  getPostById(3),
+  fetchPost(1),
+  fetchPost(2),
+  fetchPost(3),
 ];
 
 const titles = await all(promises, (post) => post.title);
@@ -22,7 +22,7 @@ titles // ['post title 1', 'post title 2', 'post title 3']
 
 ```js
 const titles = await all([1,2,3], async (id) => {
-  const posts = await getPostById(id)
+  const posts = await fetchPost(id)
   return posts.title;
 });
 
@@ -33,9 +33,9 @@ titles // ['post title 1', 'post title 2', 'post title 3']
     
 ```js
 const promises = {
-  one: getPostById(1),
-  two: getPostById(2),
-  three: getPostById(3),
+  one: fetchPost(1),
+  two: fetchPost(2),
+  three: fetchPost(3),
 };
 
 const titles = await all(promises, (post) => post.title);
