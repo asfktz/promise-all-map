@@ -12,7 +12,7 @@ A tiny helper that makes Promise.all a bit more powerful by:
 
 ### Usage
 
-```
+```js
   import all from 'promise-all-map';
 ```
 
