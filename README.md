@@ -10,6 +10,8 @@ A tiny helper that makes Promise.all a bit more powerful by:
   npm install promise-all-map
 ```
 
+### Usage
+
 ```
   import all from 'promise-all-map';
 ```
