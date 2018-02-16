@@ -1,7 +1,7 @@
 ### Install
 
 ```
-  npm i map-all
+  npm install promise-all-map
 ```
 
 #### It acts as Promise.all + map
