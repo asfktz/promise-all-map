@@ -6,19 +6,22 @@ npm i map-all
 
 
 ### Promise.all + map
+Before
+
 ```js
 const urls = [
   'api/posts/1',
   'api/posts/1/comments'
 ]
 
-// before
 const posts = await Promise.all(urls.map(async (url) => {
   const res = await fetch(url);
   return res.json();
 }))
+```
 
-// after
+After
+```js
 const posts = await all(urls, async (url) => {
   const res = await fetch(url);
   return res.json();
